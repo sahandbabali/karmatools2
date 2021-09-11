@@ -32,6 +32,20 @@ var III = 0;
 var totalwood = 0;
 var nom = 0;
 
+const date = new Date();
+const weekday = new Intl.DateTimeFormat("fa", {
+  weekday: "long",
+}).format(date);
+
+const faDate = new Intl.DateTimeFormat("fa", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+}).format(date);
+
+var fadatetext = `${weekday} - ${faDate}`;
+document.getElementById("fadatebox").innerHTML = fadatetext;
+
 document.getElementById("reset").addEventListener("click", function () {
   location.reload();
 });
