@@ -46,6 +46,8 @@ const faDate = new Intl.DateTimeFormat("fa", {
 var fadatetext = `${weekday} - ${faDate}`;
 document.getElementById("fadatebox").innerHTML = fadatetext;
 
+document.getElementById("titleinp").defaultValue = "عنوان سفارش";
+
 document.getElementById("reset").addEventListener("click", function () {
   location.reload();
 });
@@ -142,9 +144,12 @@ document.getElementById("printkon").addEventListener("click", printkon);
 
 function printkon() {
   var element = document.getElementById("infobox");
+
+  var tempname = document.getElementById("titleinp").value;
+
   var opt = {
-    margin: 1,
-    filename: "myfile.pdf",
+    // margin: 1,
+    filename: `${tempname}.pdf`,
     image: { type: "jpeg", quality: 0.98 },
     html2canvas: { scale: 1 },
     jsPDF: { unit: "cm", format: "a4", orientation: "portrait" },
