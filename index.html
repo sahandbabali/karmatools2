@@ -13,6 +13,12 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
 
     <link rel="stylesheet" href="/style.css" />
 
@@ -125,7 +131,10 @@
             <!-- start of info box -->
             <div id="infobox" class="col-12 col-sm-6">
               <div class="card text-white bg-secondary mb-3">
-                <div class="card-header"><p id="fadatebox"></p></div>
+                <div class="card-header">
+                  <p id="fadatebox"></p>
+                  <p id="fatimebox"></p>
+                </div>
                 <div class="card-body">
                   <input
                     type="text"
@@ -188,6 +197,7 @@
 
                   <button id="cal" type="button" class="btn btn-light">
                     محاسبه
+                    <i class="fas fa-calculator"></i>
                   </button>
 
                   <button
@@ -196,9 +206,11 @@
                     class="btn btn-outline-light"
                   >
                     فرم جدید
+                    <i class="fas fa-eraser"></i>
                   </button>
                   <button id="printkon" type="button" class="btn btn-secondary">
                     چاپ
+                    <i class="fas fa-print"></i>
                   </button>
                 </div>
               </div>

@@ -44,7 +44,20 @@ const faDate = new Intl.DateTimeFormat("fa", {
 }).format(date);
 
 var fadatetext = `${weekday} - ${faDate}`;
-document.getElementById("fadatebox").innerHTML = fadatetext;
+document.getElementById(
+  "fadatebox"
+).innerHTML = `<i class="fas fa-calendar-alt"></i>  ${fadatetext}`;
+
+const fatime = new Intl.DateTimeFormat("fa", {
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+  // timeZoneName: "short",
+}).format(date);
+
+document.getElementById(
+  "fatimebox"
+).innerHTML = `<i class="far fa-clock"></i>  ${fatime}`;
 
 document.getElementById("titleinp").defaultValue = "عنوان سفارش";
 
